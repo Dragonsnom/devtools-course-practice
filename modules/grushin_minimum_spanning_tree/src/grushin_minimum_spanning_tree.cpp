@@ -14,7 +14,7 @@ Graph::Graph(int V) {
   T.clear();
 }
 void Graph::AddWeightedEdge(int u, int v, int w) {
-  G.push_back(make_pair(w, edge(u, v)));
+  G.push_back(std::make_pair(w, std::edge(u, v)));
 }
 int Graph::find_set(int i) {
   // If i is the parent of itself
@@ -56,10 +56,10 @@ void Graph::kruskal() {
   }
 }
 void Graph::print() {
-  cout << "Edge :" << " Weight" << endl;
+  std::cout << "Edge :" << " Weight" << std::endl;
   for (int i = 0; i < T.size(); i++) {
-    cout << T[i].second.first << " - " << T[i].second.second << " : "
+    std::cout << T[i].second.first << " - " << T[i].second.second << " : "
       << T[i].first;
-    cout << endl;
+    std::cout << std::endl;
   }
 }

@@ -10,8 +10,8 @@
 
 class Graph {
 private:
-  std::vector<std::pair<int, edge>> G; 
-  std::vector<std::pair<int, edge>> T; 
+  std::vector<std::pair<int, std::edge>> G; 
+  std::vector<std::pair<int, std::edge>> T; 
   int* parent;
   int V; 
 public:
