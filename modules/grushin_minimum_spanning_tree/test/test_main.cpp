@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Grushin Dmitriy
+﻿  // Copyright 2022 Grushin Dmitriy
 
 #include <gtest/gtest.h>
 
