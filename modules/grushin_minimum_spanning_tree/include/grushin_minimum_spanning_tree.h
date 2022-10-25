@@ -24,6 +24,4 @@ class Graph {
   void kruskal();
   void print();
 };
-
-
 #endif  // MODULES_GRUSHIN_MINIMUM_SPANNING_TREE_INCLUDE_GRUSHIN_MINIMUM_SPANNING_TREE_H_
