@@ -16,7 +16,7 @@ class Graph {
   int* parent;
   int V;
  public:
-  Graph(int V);
+  explicit Graph(int V);
   void AddWeightedEdge(int u, int v, int w);
   int find_set(int i);
   int minimum();
