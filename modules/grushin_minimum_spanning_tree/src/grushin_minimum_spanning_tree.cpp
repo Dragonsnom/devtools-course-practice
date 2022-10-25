@@ -17,7 +17,6 @@ void Graph::AddWeightedEdge(int u, int v, int w) {
   G.push_back(std::make_pair(w, std::edge(u, v)));
 }
 int Graph::find_set(int i) {
-  // If i is the parent of itself
   if (i == parent[i])
     return i;
   else
@@ -32,7 +31,7 @@ int Graph::minimum() {
 
   else {
     int minimum_size = 0;
-    for (int i = 0; i < T.size(); i++) {
+    for (unsigned int i = 0; i < T.size(); i++) {
       minimum_size += T[i].first;
     }
 
@@ -44,7 +43,8 @@ void Graph::union_set(int u, int v) {
   parent[u] = parent[v];
 }
 void Graph::kruskal() {
-  int i, uRep, vRep;
+  int uRep, vRep;
+  unsigned int i;
   sort(G.begin(), G.end()); 
   for (i = 0; i < G.size(); i++) {
     uRep = find_set(G[i].second.first);
@@ -57,7 +57,7 @@ void Graph::kruskal() {
 }
 void Graph::print() {
   std::cout << "Edge :" << " Weight" << std::endl;
-  for (int i = 0; i < T.size(); i++) {
+  for (unsigned int i = 0; i < T.size(); i++) {
     std::cout << T[i].second.first << " - " << T[i].second.second << " : "
       << T[i].first;
     std::cout << std::endl;
