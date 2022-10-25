@@ -11,10 +11,10 @@
 
 class Graph {
  private:
-  std::vector<std::pair<int, std::edge>> G; 
+  std::vector<std::pair<int, std::edge>> G;
   std::vector<std::pair<int, std::edge>> T;
   int* parent;
-  int V; 
+  int V;
  public:
   Graph(int V);
   void AddWeightedEdge(int u, int v, int w);

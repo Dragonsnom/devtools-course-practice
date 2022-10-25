@@ -24,12 +24,9 @@ int Graph::find_set(int i) {
 }
 
 int Graph::minimum() {
-
   if (T.size() == 0) {
     return 0;
-  }
-
-  else {
+  } else {
     int minimum_size = 0;
     for (unsigned int i = 0; i < T.size(); i++) {
       minimum_size += T[i].first;
@@ -45,7 +42,7 @@ void Graph::union_set(int u, int v) {
 void Graph::kruskal() {
   int uRep, vRep;
   unsigned int i;
-  sort(G.begin(), G.end()); 
+  sort(G.begin(), G.end());
   for (i = 0; i < G.size(); i++) {
     uRep = find_set(G[i].second.first);
     vRep = find_set(G[i].second.second);
