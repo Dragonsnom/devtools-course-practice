@@ -95,7 +95,5 @@ TEST(Grushin_Dmitriy_minimum_spanning_tree, can_print) {
   g.AddWeightedEdge(5, 4, 3);
   g.kruskal();
 
-
-
   ASSERT_NO_THROW(g.kruskal());
 }
