@@ -1,18 +1,19 @@
 // Copyright 2022 Grushin Dmitriy
-#ifndef MODULES_GRUSHIN_DMITRIY_MINIMUM_SPANNING_TREE_H_
-#define MODULES_GRUSHIN_DMITRIY_MINIMUM_SPANNING_TREE_H_
+#ifndef MODULES_GRUSHIN_MINIMUM_SPANNING_TREE_INCLUDE_GRUSHIN_MINIMUM_SPANNING_TREE_H_
+#define MODULES_GRUSHIN_MINIMUM_SPANNING_TREE_INCLUDE_GRUSHIN_MINIMUM_SPANNING_TREE_H_
+
 #define edge pair<int,int>
-using namespace std;
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
 
 class Graph {
 private:
-  std::vector<pair<int, edge>> G; // graph
-  std::vector<pair<int, edge>> T; // mst
+  std::vector<std::pair<int, edge>> G; 
+  std::vector<std::pair<int, edge>> T; 
   int* parent;
-  int V; // number of vertices/nodes in graph
+  int V; 
 public:
   Graph(int V);
   void AddWeightedEdge(int u, int v, int w);
@@ -24,4 +25,4 @@ public:
 };
 
 
-#endif  // MODULES_GRUSHIN_DMITRIY_MINIMUM_SPANNING_TREE_H_
+#endif  // MODULES_GRUSHIN_MINIMUM_SPANNING_TREE_INCLUDE_GRUSHIN_MINIMUM_SPANNING_TREE_H_
